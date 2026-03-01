@@ -1,0 +1,82 @@
+.bar {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(3, 3, 5, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 28px;
+  margin-bottom: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.4));
+}
+
+.brand small {
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.highlight {
+  font-size: 1.8rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 800;
+  color: #ff9800;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #ff980055, 0 1px 0 #fff;
+  margin-bottom: 0.1rem;
+  background: linear-gradient(90deg, #ff9800 40%, #ffb74d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.meta {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.metaLabel {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.userName {
+  font-size: 1rem;
+}
+
+.rolePill {
+  align-self: flex-end;
+  margin-top: 0.15rem;
+  border-radius: 999px;
+  padding: 0.15rem 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--brand-200);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
