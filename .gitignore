@@ -1,0 +1,37 @@
+# Dependências
+node_modules/
+vendor/
+
+# Ambientes
+.env
+.env.backup
+.env.production
+
+# Banco de dados
+*.sqlite
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache e builds
+backend/storage/framework/views/*.php
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/logs/*
+backend/bootstrap/cache/*.php
+frontend/dist/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Misc
+package-lock.json
+backend/composer.lock
