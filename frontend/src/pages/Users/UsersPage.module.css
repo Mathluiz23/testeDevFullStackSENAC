@@ -1,0 +1,26 @@
+.wrapper {
+  padding: 2rem clamp(1rem, 3vw, 3rem);
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.listSection {
+  margin-top: 2rem;
+}
+
+.listSection header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.listSection span {
+  color: var(--text-muted);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
