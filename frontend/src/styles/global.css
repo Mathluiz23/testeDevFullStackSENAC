@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --brand-950: #030305;
+  --brand-900: #050708;
+  --brand-800: #0d1117;
+  --brand-700: #161b22;
+  --brand-600: #1f2933;
+  --brand-500: #ff8a1c;
+  --brand-400: #ffb347;
+  --brand-200: #ffe1c0;
+  --text-primary: #f4f4f6;
+  --text-muted: #8f9ba8;
+  --stroke: rgba(255, 255, 255, 0.08);
+  --danger: #ff6b81;
+  --success: #9be15d;
+  --surface-control: rgba(255, 255, 255, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #030305;
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.4;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-primary);
+  caret-color: var(--text-primary);
+  transition: background-color 9999s ease-in-out 0s;
+  background-color: transparent !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease var(--delay, 0s) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-marquee {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-marquee::before,
+.bg-marquee::after {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle, rgba(255, 138, 28, 0.15), transparent 60%);
+  filter: blur(96px);
+}
+
+.bg-marquee::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.04), transparent 55%);
+  transform: translate(40%, -30%);
+}
+
+.fullscreen-loader {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--brand-900), var(--brand-800));
+  color: var(--text-primary);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--brand-400);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
