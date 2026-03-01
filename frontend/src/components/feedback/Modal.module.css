@@ -1,0 +1,131 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(3, 7, 18, 0.82);
+  backdrop-filter: blur(10px);
+  z-index: 1200;
+  animation: fadeIn 200ms ease;
+  min-height: 100vh;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  max-height: min(90vh, 520px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: radial-gradient(circle at top left, rgba(20, 23, 32, 0.95), rgba(6, 7, 9, 0.98));
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 260ms ease;
+}
+
+.small {
+  max-width: 520px;
+}
+
+.medium {
+  max-width: 720px;
+}
+
+.large {
+  max-width: 920px;
+}
+
+.header {
+  padding: 1.5rem 1.75rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header p {
+  margin: 0.45rem 0 0;
+  color: var(--text-muted, #94a3b8);
+  line-height: 1.55;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.35rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
+  outline: none;
+}
+
+.closeButton:active {
+  transform: scale(0.97);
+}
+
+.body {
+  padding: 1.25rem 1.75rem 1.75rem;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 0.75rem;
+  }
+
+  .modal {
+    border-radius: 22px;
+  }
+
+  .header {
+    padding: 1.25rem 1.35rem 0.65rem;
+  }
+
+  .body {
+    padding: 1rem 1.35rem 1.35rem;
+  }
+}
