@@ -9,10 +9,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 WORKDIR /app
 
-COPY composer.json composer.lock ./
-RUN composer install --no-dev --prefer-dist --optimize-autoloader
-
 COPY . .
+
+RUN composer install --no-dev --prefer-dist --optimize-autoloader
 
 RUN mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs \
     && touch database/database.sqlite
