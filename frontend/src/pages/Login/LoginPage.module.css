@@ -11,8 +11,8 @@
   position: absolute;
   inset: 0;
   background: url('https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?auto=format&fit=crop&w=1600&q=80') center/cover;
-  opacity: 0.18;
-  filter: blur(20px);
+  opacity: 0.06;
+  filter: blur(20px) saturate(0.3);
 }
 
 .sceneLogo {

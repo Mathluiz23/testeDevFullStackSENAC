@@ -102,12 +102,12 @@ select:-webkit-autofill:focus {
   content: '';
   position: absolute;
   inset: -20%;
-  background: radial-gradient(circle, rgba(255, 138, 28, 0.15), transparent 60%);
+  background: radial-gradient(circle, rgba(255, 138, 28, 0.05), transparent 60%);
   filter: blur(96px);
 }
 
 .bg-marquee::after {
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.04), transparent 55%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02), transparent 55%);
   transform: translate(40%, -30%);
 }
 
