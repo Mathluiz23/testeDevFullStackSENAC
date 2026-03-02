@@ -1,5 +1,7 @@
 # SENAC-RS Gestão de Usuários
 
+## 🎬 [Vídeo de apresentação do projeto no YouTube](https://www.youtube.com/watch?v=V1ULzWIUais)
+
 Este projeto consiste em uma plataforma de gerenciamento de contas do SENAC/RS. Uma aplicação para cadastro e controle de usuários, onde cada usuário possui um nível de permissão definido, podendo ou não executar determinadas ações dentro da plataforma.
 
 Ao informar CPF e senha válidos, o usuário tem acesso ao sistema. Dependendo do seu nível de permissão:
